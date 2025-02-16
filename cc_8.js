@@ -43,3 +43,25 @@ const calculateServiceFee = (amount, serviceType) => {
 // the lines below run the function using the parameters provided
 calculateServiceFee(200, "Premium");
 calculateServiceFee(500, "Standard");
+
+
+// Task 4: Parameters and Arguments
+
+// the lines below create a function that calculates the total rental cost
+function calculateRentalCost(days, carType, insurance = false) {
+    let carPrice = {"Economy": 40, "Standard": 60, "Luxury": 100};
+    let rentalCost = (carPrice[carType] * days); // declares the equation and the amount to use by considering the car type
+
+    // uses an if function to declare how much insurance is, if the person chooses to use insurance
+    if (insurance === true) {
+        rentalCost += (20*days);
+    };
+
+    // line 61 logs the result in the console
+    console.log(`Total Rental Cost: $${rentalCost}`);
+};
+
+
+// the lines below run the function using the parameters provided
+calculateRentalCost(3, "Economy", true);
+calculateRentalCost(5, "Luxury", false);
