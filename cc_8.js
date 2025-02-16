@@ -79,3 +79,20 @@ function calculateLoanPayment(principal, rate, time) {
 // the lines below run the function using the parameters provided
 console.log(calculateLoanPayment(1000, 0.05, 2));
 console.log(calculateLoanPayment(5000, 0.07, 3));
+
+
+// Task 6: Higher-Order Functions
+
+let transactions = [200, 1500, 3200, 800, 2500]; // declares an array
+
+// lines below create a function that filters all transactions above 1000
+function filterLargeTransactions(transactions, filterFunction) {
+    let filteredTransactions = transactions.filter(filterFunction); // this line uses the filter method to filter the array
+
+    // line 93 logs the filtered array in the console
+    console.log(filteredTransactions);
+};
+
+
+// runs the function using the parameters provided
+filterLargeTransactions(transactions, amount => amount > 1000);
