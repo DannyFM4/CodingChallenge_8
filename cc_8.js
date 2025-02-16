@@ -65,3 +65,17 @@ function calculateRentalCost(days, carType, insurance = false) {
 // the lines below run the function using the parameters provided
 calculateRentalCost(3, "Economy", true);
 calculateRentalCost(5, "Luxury", false);
+
+
+// Task 5: Returning Values
+
+// the lines below create a function to calculate the total loan payment
+function calculateLoanPayment(principal, rate, time) {
+    let totalPayment = (principal + (principal * rate * time)).toFixed(2); // this line declares the equation to use and logs the result under a variable
+    return `Total Payment: $${totalPayment}`; // this lines returns the outcome in a template literal form
+};
+
+
+// the lines below run the function using the parameters provided
+console.log(calculateLoanPayment(1000, 0.05, 2));
+console.log(calculateLoanPayment(5000, 0.07, 3));
