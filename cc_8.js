@@ -117,3 +117,17 @@ let cart = createCartTracker();
 // the lines below run the function using parameters provided and log it in the console
 console.log(cart(20)); 
 console.log(cart(35));
+
+
+// Task 8: Recursion in JavaScript
+
+// the lines below create a function that projects the amount of saving after a certain amount of years
+function calculateSavings(years, amount) {
+    if (years >= 10) return amount; // will return the amount if years is greater than or equal to 10
+    return calculateSavings(years + 1, amount * 1.05); // gives the equation for if the years is less than 10
+};
+
+
+// the lines below run the function using the parameters provided, then log it in the console
+console.log(`Projected Savings: $${calculateSavings(8, 1000).toFixed(2)}`);
+console.log(`Projected Savings: $${calculateSavings(5, 5000).toFixed(2)}`);
