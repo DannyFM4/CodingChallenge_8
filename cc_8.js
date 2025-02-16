@@ -24,3 +24,22 @@ const calculateDiscount = function(price, discountRate) {
 // the lines below run the function using the parameters provided
 calculateDiscount(100, 0.2);
 calculateDiscount(250, 0.15);
+
+
+// Task 3: Arrow Function
+
+// the lines below create a function to calculate the service fee
+const calculateServiceFee = (amount, serviceType) => {
+    let serviceFee = 0;
+    if (serviceType === "Premium") serviceFee = amount * .15; // lines 34-36 use an if else statement to determine the percentage based on the service type
+    else if (serviceType === "Standard") serviceFee = amount * .1;
+    else serviceFee = amount * .05;
+
+    // line 39 logs the result in the console
+    console.log(`Service Fee: $${serviceFee.toFixed(2)}`);
+};
+
+
+// the lines below run the function using the parameters provided
+calculateServiceFee(200, "Premium");
+calculateServiceFee(500, "Standard");
