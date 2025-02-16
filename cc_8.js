@@ -96,3 +96,24 @@ function filterLargeTransactions(transactions, filterFunction) {
 
 // runs the function using the parameters provided
 filterLargeTransactions(transactions, amount => amount > 1000);
+
+
+// Task 7: Closures
+
+// the lines below create a function to track the total cart value
+function createCartTracker() {
+    let shoppingCart = 0;
+
+    return function(item) {
+        shoppingCart += item; // this line adds each item to the last
+        return `Total Cart Value: $${shoppingCart}`;
+    };
+};
+
+
+//line 115 assigns the function to the variable cart
+let cart = createCartTracker();
+
+// the lines below run the function using parameters provided and log it in the console
+console.log(cart(20)); 
+console.log(cart(35));
